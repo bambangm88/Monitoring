@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:id="@+id/btn_itemRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:elevation="4dp"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/bgImage"
+                        android:layout_width="10dp"
+                        android:layout_height="80dp"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/ivTextDrawable"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+
+                            android:background="@drawable/button_shape_rounded_yellow_"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/bedRoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            tools:text="Payment Method"/>
+
+                        <TextView
+
+                            android:textStyle="bold"
+                            android:id="@+id/tvDetail"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            tools:text="Description"/>
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tvStatus"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            tools:text="fee"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

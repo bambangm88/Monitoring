@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_pay"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#fff"
+            app:elevation="4dp"
+            android:theme="@style/mytoolbar"
+            app:popupTheme="@style/Base.Theme.AppCompat.Light.DarkActionBar" >
+
+            <TextView
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAIL ROOM"
+                android:textColor="@color/colorUtama"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="5dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:text="No Kunjungan"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:enabled="false"
+                android:editable="false"
+                android:id="@+id/idKunjungan"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Tn / Ny"
+                android:layout_marginLeft="20dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:enabled="false"
+                android:editable="false"
+                android:id="@+id/namaPasien"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="No MR"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:enabled="false"
+            android:editable="false"
+            android:id="@+id/noMr"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="Kelas"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:enabled="false"
+            android:editable="false"
+            android:id="@+id/kelas"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="Tanggal Masuk"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:enabled="false"
+            android:editable="false"
+            android:id="@+id/tglMasuk"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="Penjamin"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:enabled="false"
+            android:editable="false"
+            android:id="@+id/penjamin"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="Diagnosa Awal"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:enabled="false"
+            android:editable="false"
+            android:id="@+id/diagnosaAwal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="DPJP"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+
+
+            <EditText
+                android:editable="false"
+                android:id="@+id/dpjp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Status Ruangan"
+                android:layout_marginLeft="20dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                android:id="@+id/statusRuangan"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/spinner"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Keterangan"
+                android:layout_marginLeft="20dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:gravity="top"
+                android:layout_marginTop="10dp"
+                android:id="@+id/text_ket"
+                android:clickable="true"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:hint="Text"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:inputType="text|textMultiLine"/>
+
+
+
+
+
+
+
+            <Button
+
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/button_shape_rounded_blue"
+                android:layout_marginBottom="20dp"
+                android:text="simpan"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_update"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/button_shape_rounded_blue"
+                android:layout_marginBottom="20dp"
+                android:text="TRANSFER"
+                android:id="@+id/btn_transfer"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/button_shape_rounded_blue"
+                android:layout_marginBottom="20dp"
+                android:text="PASIEN PULANG"
+                android:id="@+id/btn_pulang"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/button_shape_rounded_blue"
+                android:layout_marginBottom="20dp"
+                android:text="Tulis Resep"
+                android:id="@+id/tulis_resep"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/button_shape_rounded_blue"
+                android:layout_marginBottom="20dp"
+                android:text="Berkas"
+                android:id="@+id/berkas"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:textAlignment="center"
+        android:text="IT RS MH.Thamrin"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

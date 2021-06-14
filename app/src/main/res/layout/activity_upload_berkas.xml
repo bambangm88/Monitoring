@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_pay"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="#fff"
+                app:elevation="4dp"
+                android:theme="@style/mytoolbar"
+                app:popupTheme="@style/Base.Theme.AppCompat.Light.DarkActionBar" >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BERKAS - BERKAS "
+                    android:textColor="@color/colorUtama"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ImageView
+            android:tag=""
+            android:src="@drawable/uploadberkassatu"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/berkas1" />
+
+
+        <ImageView
+            android:tag=""
+            android:src="@drawable/uploadberkasdua"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/berkas2" />
+
+
+        <ImageView
+            android:tag=""
+            android:src="@drawable/uploadberkastiga"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/berkas3" />
+
+
+
+        <ImageView
+            android:tag=""
+            android:src="@drawable/uploadberkasempat"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/berkas4" />
+
+
+
+        <ImageView
+            android:tag=""
+            android:src="@drawable/uploadberkaslima"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/berkas5" />
+
+
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/button_shape_rounded_blue"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="50dp"
+            android:text="TRANSFER"
+            android:id="@+id/btn_upload"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

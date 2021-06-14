@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    tools:context=".Login">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_pay"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#fff"
+            app:elevation="4dp"
+            android:theme="@style/mytoolbar"
+            app:popupTheme="@style/Base.Theme.AppCompat.Light.DarkActionBar" >
+
+            <TextView
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@color/colorUtama"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+
+                android:layout_centerInParent="true"
+                android:src="@drawable/logoo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="Username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:textSize="20dp"
+
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Username"
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:text="Password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/button_shape_rounded_blue"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Login"
+
+            android:id="@+id/btn_login"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorUtama">#4788C8</color>
+    <color name="colorWhite">#fff</color>
+
+    <color name="colorRusak">#e74a3b</color>
+
+    <color name="colorKosong">#e9e9e9</color>
+
+    <color name="colorCLosed">#ccffcc</color>
+
+    <color name="colorBooking">#FAEDFF</color>
+
+    <color name="colorRencanaPulang">#858796</color>
+
+    <color name="colorTitipan">#f6c23e</color>
+
+    <color name="colorIsi">#F6FCFE</color>
+
+    <color name="colorName">#FAFAFA</color>
+
+    <color name="colorL">#4788C8</color>
+
+    <color name="colorP">#e83e8c</color>
+
+    <color name="CLOSED">#F4FFCC  </color>
+
+
+</resources>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_pay"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#fff"
+            app:elevation="4dp"
+            android:theme="@style/mytoolbar"
+            app:popupTheme="@style/Base.Theme.AppCompat.Light.DarkActionBar" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONITORING"
+                android:textColor="@color/colorUtama"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+            <RelativeLayout
+                android:id="@+id/btn_notification"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/bel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/badge"
+                    android:layout_marginTop="8dp"
+                    android:padding="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/notification"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:text="20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/appbar_pay"
+        android:id="@+id/profile"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:text="SEARCH ROOM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:elevation="5dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:text="SEARCH ROOM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Spinner
+            android:id="@+id/spMonitor"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner"
+            android:spinnerMode="dialog"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spFloor"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner"
+            android:spinnerMode="dialog"/>
+
+        <Spinner
+            android:visibility="gone"
+            
+            android:id="@+id/spKelas"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner"
+            android:spinnerMode="dialog"/>
+
+        <Button
+
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/button_shape_rounded_blue"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="50dp"
+            android:text="Search"
+            android:id="@+id/btn_cari"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+
+                        android:text="ROOM STATISTICS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <LinearLayout
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                    <LinearLayout
+                        android:layout_margin="2dp"
+                        android:id="@+id/btn_isi"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:background="@color/colorIsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/isi"
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="200"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/isi"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:text="ISI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_margin="2dp"
+                        android:id="@+id/btn_rencana_pulang"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:background="@color/colorRencanaPulang"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/rencana_pulang"
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="200"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/rencana_pulang"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textSize="13dp"
+                                android:text="RENCANA PULANG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_margin="2dp"
+                        android:id="@+id/btn_titipan"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:background="@color/colorTitipan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/titipan"
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="200"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/titipan"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textSize="13dp"
+                                android:text="TITIPAN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+
+                        <LinearLayout
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_booking"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <RelativeLayout
+                                android:background="@color/colorBooking"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/booking"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/booking"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="BOOKING"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_kosong"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:background="@color/colorKosong"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/kosong"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/kosong"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="KOSONG"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_rusak"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:background="@color/colorRusak"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/rusak"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/rusak"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="RUSAK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+
+                        <LinearLayout
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_closed"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <RelativeLayout
+                                android:background="@color/CLOSED"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/closed"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/closed"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="CLOSED"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:visibility="invisible"
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_kosong_"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:background="@color/colorKosong"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/kosong"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/kosong"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="KOSONG"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:visibility="invisible"
+                            android:layout_margin="2dp"
+                            android:id="@+id/btn_rusak_"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:background="@color/colorRusak"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/rusak"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/rusak"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="13dp"
+                                    android:text="RUSAK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+            </ScrollView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:textAlignment="center"
+        android:text="IT Radjak Hospital"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
