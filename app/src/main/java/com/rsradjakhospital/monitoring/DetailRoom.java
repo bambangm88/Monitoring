@@ -43,7 +43,7 @@ public class DetailRoom extends AppCompatActivity {
     ApiService API;
 
 
-    EditText  tv_kunjungan , tvNoMr , tvKelas , tv_tglMasuk , tvPenjamin , tvDiagnosaAwal , dpjp , namaPasien ;
+    EditText  tv_kunjungan , tvNoMr , tvKelas , tv_tglMasuk , tvPenjamin , tvDiagnosaAwal , dpjp , namaPasien , lamaInap ;
     TextView tv_title , textKet ;
     Spinner statusRuangan ;
     public static String  TAG_NAMA_BED= "" ;
@@ -56,6 +56,7 @@ public class DetailRoom extends AppCompatActivity {
     public static String  TAG_ROOM= "" ;
     public static String  TAG_ROOM_HEADER= "" ;
     public static String  TAG_TANGGAL_MASUK = "" ;
+    public static String  TAG_LAMA_INAP= "" ;
     public static String  TAG_PENJAMIN = "" ;
     public static String  TAG_DIAGNOSA_AWAL = "" ;
     public static String  TAG_DPJP = "" ;
@@ -93,6 +94,7 @@ public class DetailRoom extends AppCompatActivity {
         btn_pulang = findViewById(R.id.btn_pulang);
 
         btn_tulis_resep = findViewById(R.id.tulis_resep);
+        lamaInap = findViewById(R.id.lamaInap);
 
 
         btn_update = findViewById(R.id.btn_update);
@@ -138,6 +140,7 @@ public class DetailRoom extends AppCompatActivity {
 
 
         tv_tglMasuk.setText(TAG_TANGGAL_MASUK);
+        lamaInap.setText(TAG_LAMA_INAP);
 
         tvPenjamin.setText(TAG_PENJAMIN);
 
@@ -210,15 +213,10 @@ public class DetailRoom extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                if(textKet.getText().toString().equals("") ){
-////                    Toast.makeText(mContext, "Silahkan isi Keterangan", Toast.LENGTH_LONG).show();
-////                }else
-
                 if(statusRuangan.getSelectedItem().toString().equals("-- Status Ruangan --")){
-                    Toast.makeText(mContext, "Silahkan pilih status ruangan", Toast.LENGTH_LONG).show();
+                    simpanDataPasien(TAG_CASES_ID,textKet.getText().toString(),TAG_NAMA_BED,TAG_DOCTOR_ID,TAG_STATUS_RUANGAN,tvDiagnosaAwal.getText().toString());
                 }else{
-                    simpanDataPasien(TAG_CASES_ID,textKet.getText().toString(),TAG_NAMA_BED,TAG_DOCTOR_ID,statusRuangan.getSelectedItem().toString());
-
+                    simpanDataPasien(TAG_CASES_ID,textKet.getText().toString(),TAG_NAMA_BED,TAG_DOCTOR_ID,statusRuangan.getSelectedItem().toString(),tvDiagnosaAwal.getText().toString());
                 }
 
 
@@ -361,7 +359,7 @@ public class DetailRoom extends AppCompatActivity {
 
 
 
-    private void simpanDataPasien(String caseID, String ket , String namaBed , String idDokter , String statusBed ){
+    private void simpanDataPasien(String caseID, String ket , String namaBed , String idDokter , String statusBed ,String diagnosa){
 
         pDialog = new ProgressDialog(DetailRoom.this);
         pDialog.setCancelable(false);
@@ -369,7 +367,7 @@ public class DetailRoom extends AppCompatActivity {
         pDialog.show();
 
 
-        Call<ResponseData> call = API.simpanDataPasien(caseID,statusBed,ket,idDokter,namaBed,TAG_USER);
+        Call<ResponseData> call = API.simpanDataPasien(caseID,statusBed,ket,idDokter,namaBed,TAG_USER,diagnosa);
         call.enqueue(new Callback<ResponseData>() {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {

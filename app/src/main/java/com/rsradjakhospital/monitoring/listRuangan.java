@@ -56,7 +56,7 @@ public class listRuangan extends AppCompatActivity {
 
 
     public  static String TAG_CATEGORY = "EMERALD" ;
-    public  static String TAG_KELAS = "VVIP" ;
+    public  static String TAG_KELAS = "" ;
     public  static String TAG_FLOOR = "FLOOR 1" ;
     public static int TAG_COUNT_KOSONG = 0;
     public static int TAG_COUNT_RUSAK = 0;

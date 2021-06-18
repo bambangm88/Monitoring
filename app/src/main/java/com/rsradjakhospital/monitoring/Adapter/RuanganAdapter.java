@@ -43,6 +43,7 @@ import static com.rsradjakhospital.monitoring.DetailRoom.TAG_DOCTOR_ID;
 import static com.rsradjakhospital.monitoring.DetailRoom.TAG_DPJP;
 
 import static com.rsradjakhospital.monitoring.DetailRoom.TAG_KUNJUNGAN;
+import static com.rsradjakhospital.monitoring.DetailRoom.TAG_LAMA_INAP;
 import static com.rsradjakhospital.monitoring.DetailRoom.TAG_NAMA_BED;
 import static com.rsradjakhospital.monitoring.DetailRoom.TAG_NAMA_PASIEN;
 import static com.rsradjakhospital.monitoring.DetailRoom.TAG_NOMR;
@@ -330,7 +331,8 @@ public class RuanganAdapter extends RecyclerView.Adapter<RuanganAdapter.AdapterH
                     TAG_STATUS_RUANGAN = responsePaymentMethod.getPatientStatus();
                     TAG_NOMR = responsePaymentMethod.getKodePasien();
                     TAG_ROOM = category+" BED "+bed ;
-                    TAG_TANGGAL_MASUK = responsePaymentMethod.getTanggalMasuk() + " / " +responsePaymentMethod.getLamaInap() + " day" ;
+                    TAG_TANGGAL_MASUK = responsePaymentMethod.getTanggalMasuk()  ;
+                    TAG_LAMA_INAP= responsePaymentMethod.getLamaInap() + " day" ;
                     TAG_PENJAMIN = responsePaymentMethod.getNamaPenjamin();
                     TAG_DIAGNOSA_AWAL = responsePaymentMethod.getPresenting_problem();
                     TAG_DPJP = responsePaymentMethod.getNamaDokter();

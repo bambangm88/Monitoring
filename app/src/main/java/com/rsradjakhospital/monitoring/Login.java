@@ -98,7 +98,7 @@ public class Login extends AppCompatActivity {
         });
 
 
-        Helper.checkVersionUpdate(this);
+        //Helper.checkVersionUpdate(this);
 
 
     }

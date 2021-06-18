@@ -1,20 +1,28 @@
 package com.rsradjakhospital.monitoring.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rsradjakhospital.monitoring.MainActivity;
 import com.rsradjakhospital.monitoring.Model.ResponseEntityCountRoomByCategory;
 import com.rsradjakhospital.monitoring.R;
+import com.rsradjakhospital.monitoring.listRuangan;
 
 import java.util.List;
 
 import butterknife.ButterKnife;
+
+import static com.rsradjakhospital.monitoring.CountRoomActivity.TAG_STATUS_CATEGORY;
+import static com.rsradjakhospital.monitoring.listRuangan.TAG_CATEGORY;
+import static com.rsradjakhospital.monitoring.listRuangan.TAG_KELAS;
 
 
 public class CountRoomAdapter extends RecyclerView.Adapter<CountRoomAdapter.AdapterHolder>{
@@ -45,6 +53,15 @@ public class CountRoomAdapter extends RecyclerView.Adapter<CountRoomAdapter.Adap
 
         holder.doctor.setText(room);
         holder.TVjumlah.setText(jumlah);
+        holder.btnItemRow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TAG_CATEGORY = room;
+                TAG_KELAS = TAG_STATUS_CATEGORY ;
+                Intent intent = new Intent(mContext, listRuangan.class);
+                mContext.startActivity(intent);
+            }
+        });
 
 
     }
@@ -61,7 +78,7 @@ public class CountRoomAdapter extends RecyclerView.Adapter<CountRoomAdapter.Adap
 
         TextView doctor;
         TextView TVjumlah;
-
+        RelativeLayout btnItemRow ;
         AlertDialog.Builder dialog;
 
 
@@ -74,6 +91,7 @@ public class CountRoomAdapter extends RecyclerView.Adapter<CountRoomAdapter.Adap
             doctor = itemView.findViewById(R.id.tvDoctor);
 
            TVjumlah = itemView.findViewById(R.id.tvJumlah);
+           btnItemRow = itemView.findViewById(R.id.btn_itemRow);
 
 
 

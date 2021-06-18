@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -51,6 +52,7 @@ import static android.R.layout.simple_spinner_item;
 import static com.rsradjakhospital.monitoring.CountRoomActivity.TAG_STATUS_CATEGORY;
 import static com.rsradjakhospital.monitoring.CountRoomActivity.TAG_STATUS_CATEGORY_COUNT;
 import static com.rsradjakhospital.monitoring.listRuangan.TAG_CATEGORY;
+import static com.rsradjakhospital.monitoring.listRuangan.TAG_KELAS;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -181,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                     TAG_CATEGORY = "" + spinnerMonitor.getSelectedItem();
 //                    TAG_FLOOR = "" + spinnerFloor.getSelectedItem();
 //                    TAG_KELAS = "" + spinnerKelas.getSelectedItem();
+                    TAG_KELAS = "" ;
                     Intent intent = new Intent(MainActivity.this, listRuangan.class);
                     startActivity(intent);
                 }
@@ -205,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                     TAG_CATEGORY = "" + spinnerMonitor.getSelectedItem();
 //                    TAG_FLOOR = "" + spinnerFloor.getSelectedItem();
 //                    TAG_KELAS = "" + spinnerKelas.getSelectedItem();
-
+                    TAG_KELAS = "" ;
                     mHandler.removeCallbacks(m_Runnable);
                     Intent intent = new Intent(MainActivity.this, listRuangan.class);
                     startActivity(intent);
@@ -258,14 +261,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Helper.checkVersionUpdate(this);
-
+        //Helper.checkVersionUpdate(this);
+        Check_version();
 
 
 
 
     }
 
+    public void Check_version() {
+        VersionChecker versionChecker = new VersionChecker(this);
+        versionChecker.execute();
+    }
 
 
     private final Runnable m_Runnable = new Runnable()
@@ -566,11 +573,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.versi) {
+
+
+            startActivity(new Intent(MainActivity.this,VersionActivity.class));
+
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
 
-    public void show_dialog(Context context){
+    public void show_dialog(Activity context){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
         builder1.setMessage("Logout ?");
         builder1.setCancelable(true);

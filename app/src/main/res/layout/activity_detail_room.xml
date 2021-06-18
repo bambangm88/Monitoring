@@ -146,6 +146,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Lama Inap"
+                android:layout_marginLeft="20dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:enabled="false"
+                android:editable="false"
+                android:id="@+id/lamaInap"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
 
         <TextView
             android:layout_marginTop="5dp"
@@ -167,15 +184,14 @@
 
         <TextView
             android:layout_marginTop="5dp"
-            android:text="Diagnosa Awal"
+            android:text="Diagnosa"
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="wrap_content"/>
 
 
         <EditText
-            android:enabled="false"
-            android:editable="false"
+
             android:id="@+id/diagnosaAwal"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"

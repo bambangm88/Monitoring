@@ -26,7 +26,7 @@
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DETAIL STATISTIC"
+                android:text="DETAIL STATISTIK"
                 android:textColor="@color/colorUtama"
                 android:textStyle="bold"
                 android:layout_gravity="center"

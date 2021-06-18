@@ -57,7 +57,8 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("simpanDataPasien")
-    Call<ResponseData> simpanDataPasien(@Field("CaseID") String CaseID,@Field("statusBed") String statusBed , @Field("Keterangan") String Keterangan,@Field("IDDokter") String IDDokter,@Field("NamaBed") String NamaBed,@Field("sUser") String sUser);
+    Call<ResponseData> simpanDataPasien(@Field("CaseID") String CaseID,@Field("statusBed") String statusBed , @Field("Keterangan") String Keterangan,@Field("IDDokter") String IDDokter,@Field("NamaBed") String NamaBed,@Field("sUser") String sUser
+            ,@Field("diagnosa") String diagnosa);
 
 
     @FormUrlEncoded
